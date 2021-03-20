@@ -18,6 +18,8 @@
     "next": "10.0.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-mason": "^1.1.2",
+    "react-responsive-masonry": "^2.1.1",
     "yup": "^0.32.9"
   },
   "devDependencies": {

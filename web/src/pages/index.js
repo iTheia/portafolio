@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <Fragment>
       <Navbar />
-      <Section size='big'>
+      <Section props={{ display: "flex" }} size='big'>
         <Landing />
       </Section>
       <Section>

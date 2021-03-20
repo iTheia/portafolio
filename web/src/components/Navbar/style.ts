@@ -8,7 +8,9 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    height: "80px",
+    [theme.breakpoints.up("md")]: {
+      height: "80px",
+    },
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -24,8 +26,9 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   solid: {
+    backgroundColor: "white",
     "& button": {
-      color: "white",
+      color: "black",
     },
   },
   button: {

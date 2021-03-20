@@ -11,7 +11,7 @@ export const Section: FC<Props> = ({ size = "medium", props, children }) => {
     size === "medium" ? "80vh" : size === "small" ? "30vh" : "100vh";
 
   return (
-    <Box paddingTop={20} paddingBottom='120px' height={height} {...props}>
+    <Box minHeight={height} {...props}>
       {children}
     </Box>
   );
@@ -25,10 +25,10 @@ interface TitleProps {
 
 export const TitleSection: FC<TitleProps> = ({ primary, secundary, props }) => (
   <Box marginBottom={3} style={props}>
-    <Typography color='primary' style={{ fontSize: "12px" }} variant='h6'>
+    <Typography color='primary' style={{ fontSize: "12px" }} variant='h5'>
       {primary.toUpperCase()}
     </Typography>
-    <Typography color='textPrimary' style={{ fontSize: "38px" }} variant='h2'>
+    <Typography color='textPrimary' style={{ fontSize: "38px" }} variant='h3'>
       {alterFormat(secundary)}
     </Typography>
   </Box>

@@ -13,13 +13,18 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     letterSpacing: "6px",
     color: "#0db3c7",
+    [theme.breakpoints.down("md")]: {
+      letterSpacing: "1px",
+    },
   },
   mainText: {
-    fontSize: "50px",
     lineHeight: "70px",
     paddingBottom: "30px",
     letterSpacing: "-1.01px",
     marginBottom: 0,
+    [theme.breakpoints.down("md")]: {
+      lineHeight: "45px",
+    },
   },
   image: {
     position: "absolute",
@@ -28,5 +33,6 @@ export const useStyles = makeStyles((theme) => ({
     width: "auto",
     right: 0,
     zIndex: -1,
+    borderBottomRightRadius: "10%",
   },
 }));

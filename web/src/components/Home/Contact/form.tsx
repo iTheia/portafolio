@@ -62,7 +62,6 @@ export const ContactForm = () => {
             size='large'
             variant='contained'
             color='secondary'
-            disabled={!(isValid && dirty)}
             type='submit'
             style={{ padding: "15px 45px", fontWeight: "bold" }}
           >

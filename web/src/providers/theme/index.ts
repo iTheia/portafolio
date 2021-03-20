@@ -4,9 +4,7 @@ import { red } from "@material-ui/core/colors";
 export const theme = createMuiTheme({
   palette: {
     primary: {
-      light: "#84dbe5",
       main: "#0db4c7",
-      dark: "#0eb3c7",
     },
     secondary: {
       main: "#41b5ff",
@@ -16,11 +14,29 @@ export const theme = createMuiTheme({
     },
     background: {
       default: "#fafafa",
+      paper: "#2e2e2e",
     },
-
     text: {
       secondary: "#677294",
       primary: "#040c2c",
+      disabled: "#fafafa",
     },
   },
 });
+
+theme.typography.h3 = {
+  fontSize: "1.2rem",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "31px",
+  },
+  [theme.breakpoints.up("md")]: {
+    fontSize: "50px",
+  },
+};
+
+theme.typography.h5 = {
+  fontSize: "20px",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "16px",
+  },
+};

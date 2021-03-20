@@ -8,7 +8,7 @@ export default function facade() {
   navRef.current = navBackGround;
   useEffect(() => {
     const handleScroll = () => {
-      const shadow = window.scrollY > 150;
+      const shadow = window.scrollY > 30;
       setNavBackGround(shadow ? "solid" : "transparent");
     };
     document.addEventListener("scroll", handleScroll);

@@ -1,6 +1,7 @@
 import React from "react";
 import {
   AppBar,
+  Box,
   Button,
   Container,
   IconButton,
@@ -14,16 +15,32 @@ export const Navbar = () => {
   const classes = useStyles();
   const navBackGround = facade();
   return (
-    <AppBar position='fixed' className={classes[navBackGround]}>
+    <AppBar
+      position='fixed'
+      color='transparent'
+      className={classes[navBackGround]}
+    >
       <Container className={classes.container}>
         <Typography variant='h6' className={classes.title}>
           News
         </Typography>
-        {links.map((link) => (
-          <Button key={link.txt} className={classes.button} color='inherit'>
-            {link.txt}
-          </Button>
-        ))}
+        <Box display={{ md: "block", lg: "block", xs: "none" }}>
+          {links.map((link) => (
+            <Button key={link.txt} className={classes.button} color='inherit'>
+              {link.txt}
+            </Button>
+          ))}
+        </Box>
+        <Box display={{ md: "none", lg: "none", xs: "block" }}>
+          <IconButton
+            edge='start'
+            className={classes.menuButton}
+            color='secondary'
+            aria-label='menu'
+          >
+            <MenuIcon color='primary' fontSize='large' />
+          </IconButton>
+        </Box>
       </Container>
     </AppBar>
   );
