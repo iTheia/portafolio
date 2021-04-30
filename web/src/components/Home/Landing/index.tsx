@@ -29,13 +29,13 @@ export const Landing = () => {
               fontWeight='bold'
               className={classes.mainText}
             >
-              Hey there!
+              Hola!
               <br />
-              I'm Martin Solonick Independent{" "}
-              <span className={classes.focus}>Frelencer</span>
+              Soy Marlon y yo hago realidad{" "}
+              <span className={classes.focus}>Ideas</span>
             </Typography>
             <Typography className={classes.leyend}>
-              I CREATE THOUSAND OFF WEBSITE
+              CREO SITIOS WEB Y APPS
             </Typography>
             <Box display='flex' mt={4}>
               <Button

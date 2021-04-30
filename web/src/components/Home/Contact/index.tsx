@@ -11,8 +11,8 @@ export const Contact = () => {
       <Grid container>
         <Grid item lg={5} md={5}>
           <TitleSection
-            primary='texto de prueba'
-            secundary='Talk Or Meet With Me'
+            primary='medios de contacto'
+            secundary='Contactame'
             props={{ marginBottom: "50px" }}
           />
           {contactTypes.map((type) => (
@@ -21,8 +21,8 @@ export const Contact = () => {
         </Grid>
         <Grid item lg={7} md={7}>
           <TitleSection
-            primary='CONTACT US'
-            secundary='Let Me Know Here Know Here'
+            primary='deja un mensaje'
+            secundary='Hazme saber que estuviste aqui'
             props={{ marginBottom: "50px" }}
           />
           <ContactForm />

@@ -1,17 +1,44 @@
-import { Box, BoxProps, Typography } from "@material-ui/core";
+import {
+  Box,
+  BoxProps,
+  makeStyles,
+  Theme,
+  Typography,
+} from "@material-ui/core";
 import { FC, CSSProperties } from "react";
 import { alterFormat } from "../../util";
 
 interface Props {
   size?: "small" | "big" | "medium";
+  primary?: boolean;
   props?: BoxProps;
+  id: string;
 }
-export const Section: FC<Props> = ({ size = "medium", props, children }) => {
-  const height =
-    size === "medium" ? "80vh" : size === "small" ? "30vh" : "100vh";
 
+const styles = makeStyles(({ palette }) => ({
+  box: {
+    backgroundColor: palette.background.paper,
+  },
+}));
+
+export const Section: FC<Props> = ({
+  size = "medium",
+  props,
+  children,
+  primary,
+  id,
+}) => {
+  const height =
+    size === "medium" ? "70vh" : size === "small" ? "30vh" : "100vh";
+
+  const classes = styles();
   return (
-    <Box minHeight={height} {...props}>
+    <Box
+      id={id}
+      className={primary ? classes.box : ""}
+      minHeight={height}
+      {...props}
+    >
       {children}
     </Box>
   );

@@ -1,5 +1,5 @@
 import { Box, Icon } from "@material-ui/core";
-import { ExitToApp } from "@material-ui/icons";
+import { ExitToApp, GitHub } from "@material-ui/icons";
 import React from "react";
 
 interface Props {
@@ -16,19 +16,17 @@ export const Links: React.FC<Props> = ({
 }) => {
   const gitHub = github ? (
     <a
-      href='http://'
+      href={github}
       target='_blank'
       rel='noopener noreferrer'
       className={githubClass}
     >
-      <Icon fontSize='large'>
-        <img src='/GitHub-Mark-32px.png' width='100%' height='100%' alt='' />
-      </Icon>
+      <GitHub fontSize='large' color='secondary' />
     </a>
   ) : null;
   const exitToApp = href ? (
-    <a href='http://' target='_blank' rel='noopener noreferrer'>
-      <ExitToApp fontSize='large' color='primary' />
+    <a href={href} target='_blank' rel='noopener noreferrer'>
+      <ExitToApp fontSize='large' color='secondary' />
     </a>
   ) : null;
 

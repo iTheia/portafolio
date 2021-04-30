@@ -5,6 +5,7 @@ import {
   Button,
   Container,
   IconButton,
+  Link,
   Typography,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -21,14 +22,21 @@ export const Navbar = () => {
       className={classes[navBackGround]}
     >
       <Container className={classes.container}>
-        <Typography variant='h6' className={classes.title}>
-          News
+        <Typography
+          variant='h6'
+          color='secondary'
+          fontWeight='bold'
+          className={classes.title}
+        >
+          Marlon
         </Typography>
         <Box display={{ md: "block", lg: "block", xs: "none" }}>
           {links.map((link) => (
-            <Button key={link.txt} className={classes.button} color='inherit'>
-              {link.txt}
-            </Button>
+            <Link key={link.txt} href={link.href}>
+              <Button color='inherit' className={classes.button}>
+                {link.txt}
+              </Button>
+            </Link>
           ))}
         </Box>
         <Box display={{ md: "none", lg: "none", xs: "block" }}>

@@ -10,10 +10,10 @@ export interface IContactType {
 }
 
 export const contactTypes: IContactType[] = [
-  { Icon: Phone, text: "+52 618 200 40 21", leyend: "Llamame" },
+  { Icon: Phone, text: "+52 618 275 15 70", leyend: "Llamame" },
   {
     Icon: ContactMail,
-    text: "martinez.ded@gmail.com",
+    text: "marlon.martinez.dev@gmail.com",
     leyend: "Enviame un correo",
   },
 ];

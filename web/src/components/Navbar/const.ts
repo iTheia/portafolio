@@ -1,16 +1,6 @@
 export const links = [
-  { txt: "Inicio" },
-  { txt: "Projectos" },
-  { txt: "Habilidades" },
-  { txt: "Acerca de" },
-  { txt: "Contacto" },
+  { txt: "Inicio", href: "#Home" },
+  { txt: "Proyectos", href: "#Proyects" },
+  { txt: "Habilidades", href: "#Skills" },
+  { txt: "Contacto", href: "#Contact" },
 ];
-
-/* <IconButton
-  edge='end'
-  className={classes.menuButton}
-  color='inherit'
-  aria-label='menu'
->
-  <MenuIcon />
-</IconButton>; */

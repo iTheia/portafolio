@@ -18,7 +18,6 @@ export const MainProject: React.FC<Props> = ({ project, index }) => {
     <Grid item xs={12} md={7} sm={12} className={classes.imageContainer}>
       <Box position='relative'>
         <img src={`/images/projects/${project.image}`} width='100%' />
-        <Box className={classes.cover}></Box>
       </Box>
     </Grid>
   );
@@ -29,21 +28,10 @@ export const MainProject: React.FC<Props> = ({ project, index }) => {
           <Typography variant='h5' className={classes.name}>
             {project.name}
           </Typography>
-          <Typography className={classes.description} color='GrayText'>
+          <Typography paragraph fontSize={17} letterSpacing={2}>
             {project.description}
           </Typography>
           <Box display={{ xs: "none", md: "block", lg: "block" }}>
-            <Box className={classes.techList}>
-              {project.technologies.map((technology) => (
-                <Typography
-                  key={technology}
-                  className={classes.tech}
-                  variant='subtitle1'
-                >
-                  {technology}
-                </Typography>
-              ))}
-            </Box>
             <Links
               github={project.github}
               boxClass={classes.techList}
@@ -68,7 +56,7 @@ export const MainProject: React.FC<Props> = ({ project, index }) => {
   );
 
   return (
-    <Box mb={2}>
+    <Box mb={3}>
       <Grid container style={{ position: "relative" }}>
         {content}
       </Grid>

@@ -1,27 +1,24 @@
 export const mainProjects: IProject[] = [
   {
+    name: "Flink",
+    description:
+      "Actualmente trabajo como desarrollador semi senior en miflink, una app que busca volver accesible el tener una tarjeta a los jovenes y el trading en mexico",
+    image: "flink.png",
+    href: "https://miflink.com/",
+  },
+  {
     name: "QrDurango",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat molestias vel dolores corrupti eum minus mollitia ex, enim nobis laudantium nisi corporis quisquam, quasi atque rem sunt vitae natus alias?",
-    technologies: ["nextjs", "express", "react", "bootstrap", "node"],
-    categories: [],
-    image: "test.png",
-    href: "asdasd",
-    github: "asdsad",
+      "Trabaje como desarrollador en Mmultimedios para crear un sitio que ayudara a promover el turismo local de mi ciudad",
+    image: "qrdgo.png",
+    href: "http://qrdgo.mx/",
   },
   {
-    name: "QrDurango",
-    description: "",
-    technologies: [],
-    categories: [],
-    image: "test.png",
-  },
-  {
-    name: "QrDurango",
-    description: "",
-    technologies: [],
-    categories: [],
-    image: "test.png",
+    name: "App de turismo",
+    description:
+      "Creacion de una app demo de turismo con funciones de tener los trending y comentarios",
+    image: "turismo.png",
+    github: "https://github.com/iTheia/travel-app",
   },
 ];
 
@@ -29,8 +26,8 @@ export interface IProject {
   name: string;
   description: string;
   image: string;
-  technologies: technology[];
-  categories: category[];
+  technologies?: technology[];
+  categories?: category[];
   href?: string;
   github?: string;
 }

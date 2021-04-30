@@ -16,7 +16,9 @@ export const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    flexGrow: 1,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   transparent: {
     background: "transparent",
@@ -33,5 +35,6 @@ export const useStyles = makeStyles((theme) => ({
   },
   button: {
     font: "600 14px/30px Montserrat,sans-serif",
+    fontWeight: "bold",
   },
 }));
