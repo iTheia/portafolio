@@ -24,21 +24,21 @@ export default function Home() {
   return (
     <Fragment>
       <Head>
-        <meta name='description' content='Aquí está la Meta-Descripción.' />
+        <meta name='description' content='Portafolio personal' />
         <meta name='robots' content='index, follow' />
         <meta
           name='keywords'
           content='Für, diese, Keywords, möchte, ich, ranken'
         />
         <meta property='og:type' content='website' />
-        <meta name='author' content='Nombre del autor' />
+        <meta name='author' content='Marlon Giovanni Martinez Herrera' />
 
-        <meta name='copyright' content='Propietario del copyright' />
-        <meta property='og:title' content='título de tu página o tu post' />
+        <meta name='copyright' content='Marlon Giovanni Martinez Herrera' />
+        <meta property='og:title' content='Marlon Dev' />
 
         <meta
           property='og:description'
-          content='descripción del contenido de la página'
+          content='Comparte tus ideas a un desarrollador'
         />
 
         <meta property='og:image' content='enlace al archive de la imagen' />
@@ -61,4 +61,9 @@ export default function Home() {
       </Section>
     </Fragment>
   );
+}
+export async function getStaticProps(context) {
+  return {
+    props: {},
+  };
 }
